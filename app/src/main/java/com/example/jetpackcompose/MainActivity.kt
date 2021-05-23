@@ -13,7 +13,19 @@ import com.example.jetpackcompose.ui.theme.JetPackComposeTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setContent {
+           Greeting("Hello Roy")
+        }
     }
 }
 
+@Composable
+fun Greeting(name: String) {
+    Text(name)
+}
+
+@Preview
+@Composable
+fun PreviewGreeting(){
+    Greeting("Ya boy Roy!!")
+}
